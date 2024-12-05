@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Date;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -12,26 +10,26 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import entities.Employee;
 
-
-public class SaveClass {
+public class UpdateClass {
 
 	public static void main(String[] args) {
 
 		StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-		
+
 		Metadata metadata = new MetadataSources(registry).getMetadataBuilder().build();
-		
+
 		SessionFactory sf = metadata.getSessionFactoryBuilder().build();
-		
+
 		Session session = sf.openSession();
-		
-		Employee e = new Employee(1234, "Rohit", "Sales", 231, new Date(), 12000f, 30);
-		
+
+		Employee e = session.get(Employee.class, 1234);
+
+		e.setDeptno(40);
 		Transaction tr = session.beginTransaction();
-		session.save(e);
+		session.update(e);
 		tr.commit();
-		
-		System.out.println("Successfull");
+
+		System.out.println("Successfull Updated");
 	}
 
 }

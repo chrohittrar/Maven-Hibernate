@@ -8,103 +8,100 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "emp10")
+@Table(name = "emp10")
 public class Employee {
-	
-		@Id 
-		@Column (name = "EMPNO")
-		private int empid;
-		
-		@Column (name="ENAME")
-		private String ename;
-		
-		@Column (name="JOB")
-		private String job;
-		
-		@Column (name="MGR")
-		private int mgr;
-		
-		@Column (name="HIREDATE")
-		private Date hiredate;
-		
-		@Column (name="SAL")
-		private float sal;
-		
-		@Column (name="DEPTNO")
-		private int deptno;
-		
-		
-		public Employee() {
-			super();
-		}	
-		
-		public Employee(int empid, String ename, String job, int mgr, Date hiredate, float sal, int deptno) {
-			super();
-			this.empid = empid;
-			this.ename = ename;
-			this.job = job;
-			this.mgr = mgr;
-			this.hiredate = hiredate;
-			this.sal = sal;
-			this.deptno = deptno;
-		}
 
-		public int getEmpid() {
-			return empid;
-		}
+	@Id
+	@Column(name = "EMPNO")
+	private int empid;
 
-		public void setEmpid(int empid) {
-			this.empid = empid;
-		}
+	@Column(name = "ENAME")
+	private String ename;
 
-		public String getEname() {
-			return ename;
-		}
+	@Column(name = "JOB")
+	private String job;
 
-		public void setEname(String ename) {
-			this.ename = ename;
-		}
+	@Column(name = "MGR")
+	private int mgr;
 
-		public String getJob() {
-			return job;
-		}
+	@Column(name = "HIREDATE")
+	private Date hiredate;
 
-		public void setJob(String job) {
-			this.job = job;
-		}
+	@Column(name = "SAL")
+	private float sal;
 
-		public int getMgr() {
-			return mgr;
-		}
+	@Column(name = "DEPTNO")
+	private int deptno;
 
-		public void setMgr(int mgr) {
-			this.mgr = mgr;
-		}
+	public Employee() {
+		super();
+	}
 
-		public Date getHiredate() {
-			return hiredate;
-		}
+	public Employee(int empid, String ename, String job, int mgr, Date hiredate, float sal, int deptno) {
+		super();
+		this.empid = empid;
+		this.ename = ename;
+		this.job = job;
+		this.mgr = mgr;
+		this.hiredate = hiredate;
+		this.sal = sal;
+		this.deptno = deptno;
+	}
 
-		public void setHiredate(Date hiredate) {
-			this.hiredate = hiredate;
-		}
+	public int getEmpid() {
+		return empid;
+	}
 
-		public float getSal() {
-			return sal;
-		}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
 
-		public void setSal(float sal) {
-			this.sal = sal;
-		}
+	public String getEname() {
+		return ename;
+	}
 
-		public int getDeptno() {
-			return deptno;
-		}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
 
-		public void setDeptno(int deptno) {
-			this.deptno = deptno;
-		}
+	public String getJob() {
+		return job;
+	}
 
-		
-		
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public int getMgr() {
+		return mgr;
+	}
+
+	public void setMgr(int mgr) {
+		this.mgr = mgr;
+	}
+
+	public Date getHiredate() {
+		return hiredate;
+	}
+
+	public void setHiredate(Date hiredate) {
+		this.hiredate = hiredate;
+	}
+
+	public float getSal() {
+		return sal;
+	}
+
+	public void setSal(float sal) {
+		this.sal = sal;
+	}
+
+	public int getDeptno() {
+		return deptno;
+	}
+
+	public void setDeptno(int deptno) {
+		this.deptno = deptno;
+	}
+
 }

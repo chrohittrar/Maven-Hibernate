@@ -19,7 +19,6 @@ public class DeleteClass {
 		  
 		SessionFactory sf = metadata.getSessionFactoryBuilder().build();
 		  
-		
 		Session session = sf.openSession();
 		 
 		
